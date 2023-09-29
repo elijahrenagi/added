@@ -9,7 +9,7 @@ def main():
     birth_str= (input("Please enter your birthdate(YYYY-MM-DD):"))
     inches = float(input("Please enter your height in U.S inches:"))
     pounds = float(input("Please enter your weight in U.S pounds:"))
-
+    centimeter = float(input("Enter your height in cm:"))
     # Call the compute_age, kg_from_lb, cm_from_in,
     years = compute_age(birth_str)
     kg = kg_from_lb(pounds)
@@ -18,12 +18,14 @@ def main():
     cm = cm_from_in(inches)
     bmi = body_mass_index(kg, cm)
     bmr = basal_metabolic_rate(gender, kg, cm, years)
+    m = m_from_cm(centimeter)
 
     print(f"Age (years): {years}")
     print(f"Weight (kg): {kg:.2f}")
     print(f"Height (cm): {cm:.1f}")
     print(f"Body Mass Index: {bmi:.1f}")
     print(f"Basal Metabolic rate (kcal/ day): {bmr:.0f}")
+    print(f"Height (m): {centimeter:.1f}")
     # Print the results for the user to see.
     pass
 
@@ -95,7 +97,15 @@ def basal_metabolic_rate(gender, weight, height, age):
     else:
         bmr = 88.362 + 13.397 * weight + 4.799 * height - 5.677 * age
     return bmr
+#STRETCH
+def m_from_cm(centimeter):
+    
+    m = 100/centimeter
+
+    return m
+
 
 main()
 # Call the main function so that
 # this program will start executing.
+
