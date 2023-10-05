@@ -4,19 +4,19 @@
     color: steelblue;
 }
 
+h1 {
+    text-align: center;
+}
 
 .main-para{
     font-size: 1.5em;
     line-height: 1.5em
 }
 
-body {
-    text-align: center;
-}
-
 nav {
     background-color: steelblue;
     padding: 10px;
+    text-align: center;
 }
 
 a {
@@ -29,8 +29,9 @@ h1 {
 }
 
 img {
-    width: 800px;
+    width: 80%;
     border: 4px solid steelblue;
+    text-align: center;
 }
 
 p {
@@ -40,4 +41,5 @@ p {
 footer {
     background-color: steelblue;
     color: white;
+    text-align: center;
 }
