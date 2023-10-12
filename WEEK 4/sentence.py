@@ -3,18 +3,25 @@ import random
 def main():
     quantity = float(input("Enter a number to randomly create a word:"))
     tense = (input("Please enter a tense - past|present|future:"))
-    sentence = make_sentence(quantity, tense)
-    print(f"{sentence.capitalize()}.")
+    
+    sentence0 = make_sentence(quantity, tense)
+    print(f"{sentence0.capitalize()}.")
+    sentence1 = make_sentence(quantity, tense)
+    print(f"{sentence1.capitalize()}.")
     sentence2 = make_sentence(quantity, tense)
     print(f"{sentence2.capitalize()}.")
-    sentence3 = get_prepositional_phrase(quantity)
+    sentence3 = make_sentence(quantity, tense)
     print(f"{sentence3.capitalize()}.")
-    sentence4 = get_prepositional_phrase(quantity)
+    sentence4 = make_sentence(quantity, tense)
     print(f"{sentence4.capitalize()}.")
     sentence5 = make_sentence(quantity, tense)
     print(f"{sentence5.capitalize()}.")
     sentence6 = get_prepositional_phrase(quantity)
     print(f"{sentence6.capitalize()}.")
+    sentence7 = get_prepositional_phrase(quantity)
+    print(f"{sentence7.capitalize()}.") 
+    sentence8 = get_prepositional_phrase(quantity)
+    print(f"{sentence8.capitalize()}.")
 
 
 def make_sentence(quantity, tense):
@@ -46,6 +53,7 @@ def get_noun(quantity):
     else:
         words = ["bird", "boy", "car", "cat", "child",
     "dog", "girl", "man", "rabbit", "woman"]
+    #randomly choose and return a noun
     word = random.choice(words)
     return word       
  
@@ -66,10 +74,10 @@ def get_verb(quantity, tense):
         words = [ "will drink", "will eat", "will grow", "will laugh",
     "will think", "will run", "will sleep", "will talk",
     "will walk", "will write"]
-        
+    #randomly choose and return a verb  
     word = random.choice(words)
     return word  
-
+    #Adding get_proposition function and get_prepositional phrase function (WEEK 4 TASK)
 def get_preposition():
     words = ["about", "above", "across", "after", "along",
     "around", "at", "before", "behind", "below",
