@@ -27,16 +27,16 @@ def pressure_loss_from_pipe(pipe_diameter, pipe_length, friction_factor, fluid_v
     v = fluid_velocity
     d1 = pipe_diameter
 
-    p = (-f*l*d*v**2)/2000*d1
+    p = -(f*l*d*v**2)/2000*d1
 
     return p
 
 
-def pressure_loss_from_fittings(fluid_velocity, quantity_fittings):
+def pressure_loss_from_fittings(fluid_velocity, quantity_angles):
     
     d = 998.2
     v = fluid_velocity
-    n = quantity_fittings
+    n = quantity_angles
 
     p = (-0.04*d*v**2*n)/(2000)
 
