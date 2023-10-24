@@ -67,12 +67,6 @@ def pressure_loss_from_pipe_reduction(larger_diameter, fluid_velocity, reynolds_
 
     return p
 
-def kpa_to_psi(kpa):
-    convert = kpa/6.8947572922
-
-    return convert
-
-
 
 
 PVC_SCHED80_INNER_DIAMETER = 0.28687 # (meters)  11.294 inches
@@ -90,8 +84,6 @@ def main():
     length1 = float(input("Length of supply pipe from tank to lot (meters): "))
     quantity_angles = int(input("Number of 90° angles in supply pipe: "))
     length2 = float(input("Length of pipe from supply to house (meters): "))
-    psi = float(input("Enter Kpa pressure:"))
-    psi = kpa_to_psi(psi)
 
     water_height = water_column_height(tower_height, tank_height)
     pressure = pressure_gain_from_water_height(water_height)
@@ -116,6 +108,5 @@ def main():
     pressure += loss
 
     print(f"Pressure at house: {pressure:.1f} kilopascals")
-    print(f"Pressure in psi:{psi:.1f}psi")
 if __name__ == "__main__":
     main()
